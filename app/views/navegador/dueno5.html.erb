@@ -1,0 +1,125 @@
+<div class="row">
+
+<div class="col">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          
+      <a class="navbar-brand" href="#">Estaciona Aquí</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              
+              <li class="nav-item">
+                 <a class="nav-link" href="/navegador/dueno2">Registrar estacionamiento</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/navegador/dueno3">Buscar estacionamiento</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/navegador/dueno4">Registrar servicio adicional</a>
+              </li>
+
+              <li class="nav-item active">
+                <a class="nav-link" href="/navegador/dueno5">Listar alquileres</a>
+              </li>
+             
+            </ul>
+          </div>
+
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="/navegador/home"> Log Out </a>
+            </li>
+            
+          </ul>
+
+      </nav>
+</div>
+
+</div>
+
+
+<div class="row">
+
+    <div class="col-4">
+      
+      <h3>Buscar alquiler por fecha</h3>
+      <form>
+
+      <div class="form-group">
+        <label for="username">Fecha de inicio</label>
+        <input type="date" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Fecha de inicio">
+      </div>
+      
+      <div class="form-group">
+        <label for="username">Fecha de fin</label>
+        <input type="date" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Fecha de fin">
+      </div>
+    
+    <button type="button" class="btn btn-dark btn-block"> <a href="#" style="color:inherit"> Buscar </a> </button>
+  
+
+    </div>
+    
+    
+    
+    <div class="col-8">
+    
+
+      <h1>Alquileres encontrados</h1>
+      
+      <ul class="nav nav-tabs">
+        
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#quesoyparte">Mis alquileres</a>
+        </li>
+  
+      </ul>
+
+
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+
+      
+        <div class="tab-pane active container" id="quesoyparte">
+        
+      <!-- ----------------- ---------------------------------------------->
+          
+          <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                <th>Nombre estacionamiento</th>
+                <th>Dirección</th>
+                <th>Fecha</th>
+        
+                </tr>
+            </thead>
+            
+            <tbody>
+
+                <tr>
+                <td>Estacionamiento 1</td>
+                <td>Dirección 1</td>
+                <td>22 - 03 - 2018</td>
+                
+                </tr>
+
+            </tbody>
+
+            </table>
+
+        </div>
+
+        
+      </div>
+
+    </div>
+      
+</div>

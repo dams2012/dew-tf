@@ -1,0 +1,132 @@
+<div class="row">
+
+<div class="col">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          
+		  <a class="navbar-brand" href="#">Estaciona Aquí</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              
+              <li class="nav-item active">
+                 <a class="nav-link" href="/navegador/dueno2">Registrar estacionamiento</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/navegador/dueno3">Buscar estacionamiento</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/navegador/dueno4">Registrar servicio adicional</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/navegador/dueno5">Listar alquileres</a>
+              </li>
+             
+            </ul>
+          </div>
+
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="/navegador/home"> Log Out </a>
+            </li>
+            
+          </ul>
+
+      </nav>
+</div>
+
+</div>
+
+
+
+<div class="row">
+
+    <div class="col"></div>
+    
+    <div class="col">
+
+      <h1>Registrar estacionamiento</h1>
+      <form>
+
+      <div class="form-group">
+        <label for="username">Nombre de estacionamiento</label>
+        <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Ingrese nombre de estacionamiento">
+      </div>
+
+      <div class="form-group">
+        <label for="username">Dirección</label>
+        <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Ingrese direccion">
+      </div>
+      
+      <div id="map"></div>
+      <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+  
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiCSAMigiVYS0mR5a1CU30qT-cYvbwY5s&callback=initMap">
+    </script>
+
+      <div class="form-group">
+        <label for="password">Teléfono fijo</label>
+        <input type="tel" class="form-control" id="password" name="password" placeholder="Ingrese teléfono fijo">
+      </div>
+
+      <div class="form-group">
+        <label for="username">Precio por hora</label>
+        <input type="number" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Ingrese precio por hora">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Subir imagen</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+    
+      <div class="form-group">
+        <label for="username">Dimensiones</label>
+        <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Dimensiones">
+      </div>
+
+      <div class="form-group">
+        <label for="sel1">Tipo de estacionamiento</label>
+          <select class="form-control" id="sel1">
+            <option>Interior</option>
+            <option>Exterior</option>
+            <option>Aire libre</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+        <label for="sel1">Ubicación</label>
+          <select class="form-control" id="sel1">
+            <option>Primer piso</option>
+            <option>Sótano</option>
+          </select>
+      </div>
+    
+    <button type="button" class="btn btn-dark btn-block"> <a href="#" style="color:inherit"> Registrar </a> </button>
+  
+  </form>
+
+   </div>
+    
+    <div class="col"></div>
+
+</div>

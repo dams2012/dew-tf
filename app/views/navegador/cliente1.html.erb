@@ -1,0 +1,258 @@
+<div class="row">
+
+<div class="col">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          
+		  <a class="navbar-brand" href="#">Estaciona Aquí</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+             
+              <li class="nav-item active">
+                <a class="nav-link" href="buscar_estacionamiento.html">Buscar estacionamiento</a>
+              </li>
+             
+            </ul>
+          </div>
+
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="/navegador/home"> Log Out </a>
+            </li>
+            
+          </ul>
+
+      </nav>
+
+</div>
+
+</div>
+
+
+<div class="row">
+
+    <div class="col-4">
+      
+      <h3>Buscar estacionamiento</h3>
+      <form>
+
+      <div class="form-group">
+        <label for="district">Distrito</label>
+          <select class="form-control" id="district">
+            <option>Barranco</option>
+            <option>Chorrillos</option>
+            <option>La Molina</option>
+            <option>Lince</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+        <label for="type">Tipo de estacionamiento</label>
+          <select class="form-control" id="type">
+            <option>Interior</option>
+            <option>Exterior</option>
+            <option>Aire libre</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Ubicación</label>
+        <input type="text" class="form-control" id="location" name="location" aria-describedby="emailHelp" placeholder="Ingrese ubicación">
+      </div>
+    
+    <div class="form-group">
+        <label for="precio">Precio por hora</label>
+        <input type="text" class="form-control" id="precio" name="precio" aria-describedby="emailHelp" placeholder="Ingrese precio por hora">
+      </div>
+    
+    <div class="form-group">
+        <label for="username">Puntuación</label>
+    <p>***</p>
+    <!--
+        <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Ingrese su nombre">-->
+      </div>
+      
+      <div id="map"></div>
+      <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+  
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiCSAMigiVYS0mR5a1CU30qT-cYvbwY5s&callback=initMap">
+    </script>
+  
+  <button type="button" class="btn btn-dark btn-block"> <a href="#" style="color:inherit"> Buscar </a> </button>
+  
+
+    </div>
+    
+    
+    
+    <div class="col-8">
+    
+
+      <h1>Estacionamientos encontrados</h1>
+      
+      <ul class="nav nav-tabs">
+        
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#quesoyparte">Estacionamientos</a>
+        </li>
+  
+      </ul>
+
+
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+
+      
+        <div class="tab-pane active container" id="quesoyparte">
+        
+      <!-- ----------------- ---------------------------------------------->
+          
+          <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                <th>Dirección</th>
+        <th>Precio por hora</th>
+        <th>Disponible</th>
+        <th>Acciones</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+
+                <tr>
+                <td>Dirección 1</td>
+        <td>S/. 1</td>
+                <td>Si</td>
+                <td><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#alquilarModal">Alquilar</button>
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#comentarModal">Comentar</button>
+                </td>
+                </tr>
+
+                <div class="modal fade" id="alquilarModal">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                          <h4 class="modal-title">Alquilar estacionamiento</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                        
+                          <form>
+
+                              <div class="form-group">
+                                <label for="username">Fecha</label>
+                                <input type="date" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Ingrese su nombre">
+                              </div>
+
+                              <div class="form-group">
+                                <label for="username">Hora</label>
+                                <input type="time" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Ingrese su nombre">
+                              </div>
+                              
+                            <div class="form-group">
+                              <label for="sel1">Elegir servicio adicional</label>
+                                <select class="form-control" id="sel1">
+                                  <option>Revisión de llantas</option>
+                                  <option>Lavado de vehículo</option>
+                                </select>
+                            </div>
+
+              <button type="button" class="btn btn-dark btn-block"> <a href="#" style="color:inherit"> Alquilar </a> </button>
+                      </form> 
+
+
+
+                        </div>
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+
+                    </div>
+                  </div>
+                </div>
+        
+        <div class="modal fade" id="comentarModal">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                          <h4 class="modal-title">Comentar estacionamiento</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                        
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" >Comentario 1</textarea>
+              </div>
+                            
+              <button type="button" class="btn btn-danger"> <a href="#" style="color:inherit"> Reply </a> </button>
+            </form>
+            
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" >Comentario 2</textarea>
+              </div>
+                            
+              <button type="button" class="btn btn-danger"> <a href="#" style="color:inherit"> Reply </a> </button>
+            </form>
+            
+            
+            
+                        <form>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Dejar comentario</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+                            
+              <button type="button" class="btn btn-dark btn-block"> <a href="#" style="color:inherit"> Comentar </a> </button>
+            </form> 
+
+
+
+                        </div>
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+
+                    </div>
+                  </div>
+                </div>
+      
+            </tbody>
+
+            </table>
+
+        </div>
+
+        
+      </div>
+
+    </div>
+      
+</div>

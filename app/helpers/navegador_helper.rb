@@ -1,0 +1,2 @@
+module NavegadorHelper
+end
